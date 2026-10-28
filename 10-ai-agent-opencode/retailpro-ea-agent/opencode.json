@@ -1,0 +1,18 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "{env:OPENCODE_MODEL}",
+  "default_agent": "ea-lead",
+  "share": "disabled",
+  "autoupdate": false,
+  "permissions": [
+    { "action": "edit", "resource": "*", "effect": "deny" },
+    { "action": "webfetch", "resource": "*", "effect": "deny" },
+    { "action": "websearch", "resource": "*", "effect": "deny" },
+    { "action": "external_directory", "resource": "*", "effect": "deny" },
+    { "action": "read", "resource": "*.env", "effect": "deny" },
+    { "action": "read", "resource": "*.env.*", "effect": "deny" },
+    { "action": "read", "resource": "input/confidential/*", "effect": "deny" },
+    { "action": "read", "resource": "*", "effect": "allow" },
+    { "action": "bash", "resource": "*", "effect": "deny" }
+  ]
+}

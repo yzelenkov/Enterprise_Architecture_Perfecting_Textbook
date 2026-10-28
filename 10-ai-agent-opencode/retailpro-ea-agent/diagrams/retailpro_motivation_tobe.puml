@@ -1,0 +1,18 @@
+@startuml
+!include <archimate/Archimate>
+title RetailPro: мотивационная, стратегическая и бизнес-архитектура (To-be)
+
+' --- Motivation ---
+Motivation_Stakeholder(st_retailpro, "RetailPro (компания)")
+Motivation_Goal(goal_repeat_sales, "Увеличить повторные продажи")
+
+' --- Strategy ---
+Strategy_Capability(cap_personalization, "Персонализация предложений")
+
+' --- Business ---
+Business_Service(bs_personalized_offers, "Персональные предложения клиентам")
+
+' --- Relationships ---
+Rel_Association(st_retailpro, goal_repeat_sales)
+Rel_Realization(cap_personalization, goal_repeat_sales)
+@enduml

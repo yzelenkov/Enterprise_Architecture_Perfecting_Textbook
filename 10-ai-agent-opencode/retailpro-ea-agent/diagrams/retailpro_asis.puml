@@ -1,0 +1,31 @@
+@startuml
+!include <archimate/Archimate>
+title RetailPro: базовая архитектура (As-is)
+
+' --- Motivation ---
+Motivation_Stakeholder(st_retailpro, "RetailPro (компания)")
+Motivation_Assessment(ass_client_data, "Данные клиентов в CRM,\nPOS и интернет-магазине")
+Motivation_Assessment(ass_consent_sync, "Согласия клиентов не\nсинхронизированы")
+
+' --- Business ---
+Business_Actor(ba_marketers, "Маркетологи")
+Business_Process(bp_segment_manual, "Формировать сегменты клиентов")
+Business_Object(bo_client_segment, "Сегмент клиентов")
+
+' --- Application ---
+Application_Component(app_crm, "CRM")
+Application_Component(app_pos, "POS")
+Application_Component(app_eshop, "Интернет-магазин")
+Application_Component(app_excel, "Excel")
+Application_DataObject(data_client_data, "Данные о клиентах")
+Application_DataObject(data_client_consent, "Согласия клиентов")
+
+' --- Relationships ---
+Rel_Assignment(ba_marketers, bp_segment_manual)
+Rel_Access(bp_segment_manual, bo_client_segment)
+Rel_Serving(app_excel, bp_segment_manual, "Excel")
+Rel_Access_rw(app_crm, data_client_data)
+Rel_Access_rw(app_pos, data_client_data)
+Rel_Access_rw(app_eshop, data_client_data)
+@enduml
+‘

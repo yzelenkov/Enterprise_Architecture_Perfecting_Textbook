@@ -1,0 +1,31 @@
+@startuml
+!include <archimate/Archimate>
+title RetailPro: прикладная архитектура персонализации (To-be)
+
+' --- Business ---
+Business_Process(bp_segment, "Формировать сегменты клиентов")
+
+' --- Application ---
+Application_Component(app_crm, "CRM")
+Application_Component(app_pos, "POS")
+Application_Component(app_eshop, "Интернет-магазин")
+Application_Component(app_cdp, "CDP")
+Application_Component(app_analytics_platform, "Аналитическая платформа")
+Application_Interface(ai_customer_api, "Customer API")
+Application_Service(as_profile_mgmt, "Управление профилем клиента")
+Application_Service(as_segmentation, "Сегментация клиентов")
+Application_DataObject(data_customer_profile, "Профиль клиента")
+Application_DataObject(data_segment, "Клиентский сегмент")
+
+' --- Relationships ---
+Rel_Flow_Down(app_crm, app_cdp, "данные клиента")
+Rel_Flow_Down(app_pos, app_cdp, "покупки")
+Rel_Flow_Down(app_eshop, app_cdp, "онлайн-заказы")
+Rel_Flow(app_cdp, app_analytics_platform, "профиль и покупки")
+Rel_Composition(app_cdp, ai_customer_api)
+Rel_Realization(app_cdp, as_profile_mgmt)
+Rel_Realization(app_analytics_platform, as_segmentation)
+Rel_Access_rw(app_cdp, data_customer_profile)
+Rel_Access_w(app_analytics_platform, data_segment)
+Rel_Serving(as_segmentation, bp_segment)
+@enduml
