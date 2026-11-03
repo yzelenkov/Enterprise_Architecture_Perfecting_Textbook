@@ -99,20 +99,21 @@ POS передает данные о покупках в CDP.
 
 **Таблица 6.2.** Сводная таблица отношений
 
-| Группа | Отношение | Представление в ArchiMate | Смысл |
-|---|---|---|---|
-| Структурные | Composition | <img src="images/icon-01.emf" alt="Иллюстрация" width="81"> | сильное отношение «часть-целое» |
-| | Aggregation | <img src="images/icon-02.emf" alt="Иллюстрация" width="82"> | слабое отношение «часть-целое» |
-| | Assignment | <img src="images/icon-03.png" alt="Иллюстрация" width="75"> | назначение активного элемента на поведение |
-| | Realization | <img src="images/icon-04.emf" alt="Иллюстрация" width="80"> | реализация более абстрактного элемента |
-| Зависимости | Serving | <img src="images/icon-05.emf" alt="Иллюстрация" width="78"> | один элемент предоставляет сервис другому |
-| | Access | <img src="images/icon-06.emf" alt="Иллюстрация" width="82"> | доступ к объекту данных или бизнес-объекту |
-| | Influence | <img src="images/icon-07.png" alt="Иллюстрация" width="75"> | влияние одного элемента на другой |
-| | Association | <img src="images/icon-08.png" alt="Иллюстрация" width="82"> | общая смысловая связь |
-| Динамические | Triggering | <img src="images/icon-09.emf" alt="Иллюстрация" width="81"> | один элемент запускает другой |
-| | Flow | <img src="images/icon-10.emf" alt="Иллюстрация" width="82"> | поток информации, товара, денег или данных |
-| Специализация | Specialization | <img src="images/icon-11.emf" alt="Иллюстрация" width="78"> | элемент является специальным случаем другого |
-| Junction | Junction | <img src="images/icon-12.emf" alt="Иллюстрация" width="24"> | логическое объединение или разделение связей |
+| Группа        | Отношение      | Представление в ArchiMate                                   | Смысл                                        |
+| ------------- | -------------- | ----------------------------------------------------------- | -------------------------------------------- |
+| Структурные   | Composition    | <img src="images/icon-01.png" alt="Иллюстрация" width="81"> | сильное отношение «часть-целое»              |
+|               | Aggregation    | <img src="images/icon-02.png" alt="Иллюстрация" width="82"> | слабое отношение «часть-целое»               |
+|               | Assignment     | <img src="images/icon-03.png" alt="Иллюстрация" width="75"> | назначение активного элемента на поведение   |
+|               | Realization    | <img src="images/icon-04.png" alt="Иллюстрация" width="80"> | реализация более абстрактного элемента       |
+| Зависимости   | Serving        | <img src="images/icon-05.png" alt="Иллюстрация" width="78"> | один элемент предоставляет сервис другому    |
+|               | Access         | <img src="images/icon-06.png" alt="Иллюстрация" width="82"> | доступ к объекту данных или бизнес-объекту   |
+|               | Influence      | <img src="images/icon-07.png" alt="Иллюстрация" width="75"> | влияние одного элемента на другой            |
+|               | Association    | <img src="images/icon-08.png" alt="Иллюстрация" width="82"> | общая смысловая связь                        |
+| Динамические  | Triggering     | <img src="images/icon-09.png" alt="Иллюстрация" width="81"> | один элемент запускает другой                |
+|               | Flow           | <img src="images/icon-10.png" alt="Иллюстрация" width="82"> | поток информации, товара, денег или данных   |
+| Специализация | Specialization | <img src="images/icon-11.png" alt="Иллюстрация" width="78"> | элемент является специальным случаем другого |
+| Junction      | Junction       | <img src="images/icon-12.png" alt="Иллюстрация" width="24"> | логическое объединение или разделение связей |
+|               |                |                                                             |                                              |
 
 ## 6.4. Composition: сильное отношение «часть-целое»
 
